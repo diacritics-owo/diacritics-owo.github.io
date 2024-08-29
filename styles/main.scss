@@ -13,15 +13,19 @@ a {
   font-weight: bold;
 }
 
-main {
-  max-width: 800px;
-  margin: auto;
-}
-
 .katex-html {
   display: none;
 }
 
 pre:has(code) {
   border: solid 1px lightgray;
+}
+
+.link-icon {
+  text-decoration: none;
+}
+
+.link-icon::before {
+  content: '§';
+  margin-right: 10px;
 }

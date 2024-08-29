@@ -18,6 +18,8 @@ import shiki from 'https://deno.land/x/lume_shiki@0.0.16/mod.ts';
 import typography from 'npm:@tailwindcss/typography';
 import remarkMath from 'https://esm.sh/remark-math@6.0.0';
 import rehypeKatex from 'https://esm.sh/rehype-katex@7.0.1';
+import rehypeSlug from 'https://esm.sh/rehype-slug@6.0.0';
+import { rehypeHeaderLinks, toc } from './_plugins.ts';
 
 const site = lume();
 
@@ -25,7 +27,7 @@ site.use(toml());
 site.use(
   remark({
     remarkPlugins: [remarkMath],
-    rehypePlugins: [rehypeKatex],
+    rehypePlugins: [rehypeKatex, rehypeSlug, rehypeHeaderLinks],
   })
 );
 site.use(sass());
@@ -38,6 +40,7 @@ site.use(
 );
 site.use(postcss());
 
+site.use(toc());
 site.use(readingInfo());
 site.use(date());
 site.use(nav());

@@ -3,11 +3,21 @@ title: Hello!
 date: 2024-08-29
 ---
 
-Hello!
+# Hello, world!
+
+<hr />
+
+## About
+
+This is my new site, powered by [Lume](https://lume.land/). The source is available at <https://github.com/diacritics-owo/diacritics-owo.github.io>.
+
+## Things
+
+<-- table of contents on the left
 
 ```typescript
 const f = (x) => (x <= 1 ? 1 : x * f(x - 1));
-// syntax highlighting
+// syntax highlighting!
 ```
 
 $$
