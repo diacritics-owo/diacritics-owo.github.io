@@ -51,6 +51,22 @@ site.use(
     },
   })
 );
+site.use(
+  feed({
+    output: ['/projects.rss', '/projects.json'],
+    query: 'type=project',
+    sort: 'date=desc',
+    info: {
+      title: '=site.title',
+      description: '=site.description',
+    },
+    items: {
+      title: '=title',
+      published: '=date',
+      description: '=description',
+    },
+  })
+);
 site.use(metas());
 
 site.use(inline());

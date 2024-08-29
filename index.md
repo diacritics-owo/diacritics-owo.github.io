@@ -13,12 +13,12 @@ I'm diacritics-owo \[she/they], a student and primarily self-taught developer. I
 
 ## Places
 
-[GitHub](https://github.com/diacritics-owo)
-
-[Modrinth](https://modrinth.com/user/diacritics-owo)
+- [GitHub](https://github.com/diacritics-owo)
+- [Modrinth](https://modrinth.com/user/diacritics-owo)
 
 ## Feeds
 
 This site has the following feeds available:
 
 - Posts ([RSS](/posts.rss)) ([JSON](/posts.json))
+- Projects ([RSS](/projects.rss)) ([JSON](/projects.json))
