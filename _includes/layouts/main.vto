@@ -2,15 +2,16 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>diacritics-owo {{- if title }} - {{ title -}} {{ /if }}</title>
+    <title>{{ site.title }} {{- if title }} - {{ title -}} {{ /if }}</title>
     <link href="/styles/base.css" rel="stylesheet" inline />
   </head>
   <body>
-    {{ include "components/navigation.vto" }}
+    {{ comp.navigation() }}
     <main class="p-20 pt-10">
       <article class="prose">
         {{ content }}
       </article>
     </main>
+    <div class="h-[50dvh]"></div>
   </body>
 </html>

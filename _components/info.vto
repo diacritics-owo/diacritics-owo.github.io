@@ -1,0 +1,6 @@
+<p class="text-sm mb-0">
+  {{ date |> date('dd MMMM yyyy') }}
+  <br />
+  {{ readingInfo.words }} word{{ readingInfo.words === 1 ? '' : 's' }} /
+  {{ readingInfo.minutes }} minute{{ readingInfo.minutes === 1 ? '' : 's' }}
+</p>

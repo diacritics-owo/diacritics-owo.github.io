@@ -1,0 +1,14 @@
+---
+layout: layouts/main.vto
+title: Posts
+---
+
+<h1>Posts</h1>
+
+<hr />
+
+<ul class="menu">
+  {{ for item of nav.menu('/posts/').children }}
+  {{ comp.post({ item }) }}
+  {{ /for }}
+</ul>

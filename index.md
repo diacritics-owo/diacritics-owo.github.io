@@ -1,10 +1,8 @@
----
-layout: layouts/main.vto
----
-
 # Hello!
 
-I'm diacritics-owo \[she/they], a primarily self-taught developer. I've been programming for several years, mostly in Rust, TypeScript, and Java.
+---
+
+I'm diacritics-owo \[she/they], a student and primarily self-taught developer. I've been programming for several years, mostly in Rust, TypeScript, and Java.
 
 ## Interests
 
@@ -18,3 +16,9 @@ I'm diacritics-owo \[she/they], a primarily self-taught developer. I've been pro
 [GitHub](https://github.com/diacritics-owo)
 
 [Modrinth](https://modrinth.com/user/diacritics-owo)
+
+## Feeds
+
+This site has the following feeds available:
+
+- Posts ([RSS](/posts.rss)) ([JSON](/posts.json))
