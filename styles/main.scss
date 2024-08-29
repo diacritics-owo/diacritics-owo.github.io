@@ -17,3 +17,11 @@ main {
   max-width: 800px;
   margin: auto;
 }
+
+.katex-html {
+  display: none;
+}
+
+pre:has(code) {
+  border: solid 1px lightgray;
+}

@@ -13,13 +13,21 @@ import feed from 'lume/plugins/feed.ts';
 import toml from 'lume/plugins/toml.ts';
 import nav from 'lume/plugins/nav.ts';
 import metas from 'lume/plugins/metas.ts';
+import shiki from 'https://deno.land/x/lume_shiki@0.0.16/mod.ts';
 
 import typography from 'npm:@tailwindcss/typography';
+import remarkMath from 'https://esm.sh/remark-math@6.0.0';
+import rehypeKatex from 'https://esm.sh/rehype-katex@7.0.1';
 
 const site = lume();
 
 site.use(toml());
-site.use(remark());
+site.use(
+  remark({
+    remarkPlugins: [remarkMath],
+    rehypePlugins: [rehypeKatex],
+  })
+);
 site.use(sass());
 site.use(
   tailwindcss({
@@ -69,6 +77,11 @@ site.use(
 );
 site.use(metas());
 
+site.use(
+  shiki({
+    theme: 'vitesse-light',
+  })
+);
 site.use(inline());
 site.use(minifyHTML());
 
