@@ -4,7 +4,6 @@ import inline from 'lume/plugins/inline.ts';
 import minifyHTML from 'lume/plugins/minify_html.ts';
 import tailwindcss from 'lume/plugins/tailwindcss.ts';
 import postcss from 'lume/plugins/postcss.ts';
-import remark from 'lume/plugins/remark.ts';
 import readingInfo from 'lume/plugins/reading_info.ts';
 import sitemap from 'lume/plugins/sitemap.ts';
 import robots from 'lume/plugins/robots.ts';
@@ -13,6 +12,8 @@ import feed from 'lume/plugins/feed.ts';
 import toml from 'lume/plugins/toml.ts';
 import nav from 'lume/plugins/nav.ts';
 import metas from 'lume/plugins/metas.ts';
+import jsx from 'lume/plugins/jsx_preact.ts';
+import mdx from 'lume/plugins/mdx.ts';
 import shiki from 'https://deno.land/x/lume_shiki@0.0.16/mod.ts';
 
 import typography from 'npm:@tailwindcss/typography';
@@ -24,8 +25,15 @@ import { rehypeHeaderLinks, toc } from './_plugins.ts';
 const site = lume();
 
 site.use(toml());
-site.use(
+/* site.use(
   remark({
+    remarkPlugins: [remarkMath],
+    rehypePlugins: [rehypeKatex, rehypeSlug, rehypeHeaderLinks],
+  })
+); */
+site.use(jsx());
+site.use(
+  mdx({
     remarkPlugins: [remarkMath],
     rehypePlugins: [rehypeKatex, rehypeSlug, rehypeHeaderLinks],
   })
@@ -41,7 +49,11 @@ site.use(
 site.use(postcss());
 
 site.use(toc());
-site.use(readingInfo());
+site.use(
+  readingInfo({
+    extensions: ['.md', '.mdx'],
+  })
+);
 site.use(date());
 site.use(nav());
 
