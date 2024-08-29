@@ -3,3 +3,9 @@ layout = "layouts/main.vto"
 [site]
 title = "diacritics-owo"
 description = "Things and stuff"
+
+[metas]
+site = "=site.title"
+lang = "en"
+generator = true
+title = "=title"

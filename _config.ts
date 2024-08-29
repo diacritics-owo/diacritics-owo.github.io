@@ -12,6 +12,7 @@ import date from 'lume/plugins/date.ts';
 import feed from 'lume/plugins/feed.ts';
 import toml from 'lume/plugins/toml.ts';
 import nav from 'lume/plugins/nav.ts';
+import metas from 'lume/plugins/metas.ts';
 
 import typography from 'npm:@tailwindcss/typography';
 
@@ -50,6 +51,7 @@ site.use(
     },
   })
 );
+site.use(metas());
 
 site.use(inline());
 site.use(minifyHTML());
