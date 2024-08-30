@@ -1,0 +1,13 @@
+---
+layout: layouts/main.vto
+title: Projects
+type:
+---
+
+import Project from '../_includes/Project.tsx';
+
+<h1>Projects</h1>
+
+<hr />
+
+{nav.menu('/projects/').children.map((item) => Project(item))}

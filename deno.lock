@@ -38,6 +38,8 @@
       "npm:@tailwindcss/typography": "npm:@tailwindcss/typography@0.5.15_tailwindcss@3.4.6__postcss@8.4.39",
       "npm:@types/estree@1.0.5": "npm:@types/estree@1.0.5",
       "npm:@types/node": "npm:@types/node@18.16.19",
+      "npm:@types/react-dom@18.3.0": "npm:@types/react-dom@18.3.0",
+      "npm:@types/react@18.3.3": "npm:@types/react@18.3.3",
       "npm:autoprefixer@10.4.19": "npm:autoprefixer@10.4.19_postcss@8.4.39",
       "npm:date-fns@3.6.0": "npm:date-fns@3.6.0",
       "npm:estree-walker@3.0.3": "npm:estree-walker@3.0.3",
@@ -54,7 +56,9 @@
       "npm:preact-render-to-string@6.5.6": "npm:preact-render-to-string@6.5.6_preact@10.22.1",
       "npm:preact@10.22.1": "npm:preact@10.22.1",
       "npm:react-dom@18.2.0": "npm:react-dom@18.2.0_react@18.2.0",
+      "npm:react-dom@18.3.1": "npm:react-dom@18.3.1_react@18.3.1",
       "npm:react@18.2.0": "npm:react@18.2.0",
+      "npm:react@18.3.1": "npm:react@18.3.1",
       "npm:rehype-raw@7.0.0": "npm:rehype-raw@7.0.0",
       "npm:rehype-sanitize@6.0.0": "npm:rehype-sanitize@6.0.0",
       "npm:rehype-stringify@10.0.0": "npm:rehype-stringify@10.0.0",
@@ -363,6 +367,23 @@
         "integrity": "sha512-IXl7o+R9iti9eBW4Wg2hx1xQDig183jj7YLn8F7udNceyfkbn1ZxmzZXuak20gR40D7pIkIY1kYGx5VIGbaHKA==",
         "dependencies": {}
       },
+      "@types/prop-types@15.7.12": {
+        "integrity": "sha512-5zvhXYtRNRluoE/jAp4GVsSduVUzNWKkOZrCDBWYtE7biZywwdC2AcEzg+cSMLFRfVgeAFqpfNabiPjxFddV1Q==",
+        "dependencies": {}
+      },
+      "@types/react-dom@18.3.0": {
+        "integrity": "sha512-EhwApuTmMBmXuFOikhQLIBUn6uFg81SwLMOAUgodJF14SOBOCMdU04gDoYi0WOJJHD144TL32z4yDqCW3dnkQg==",
+        "dependencies": {
+          "@types/react": "@types/react@18.3.3"
+        }
+      },
+      "@types/react@18.3.3": {
+        "integrity": "sha512-hti/R0pS0q1/xx+TsI73XIqk26eBsISZ2R0wUijXIngRK9R/e7Xw/cXVxQK7R5JjW+SV4zGcn5hXjudkN/pLIw==",
+        "dependencies": {
+          "@types/prop-types": "@types/prop-types@15.7.12",
+          "csstype": "csstype@3.1.3"
+        }
+      },
       "@types/unist@2.0.11": {
         "integrity": "sha512-CmBKiL6NNo/OqgmMn95Fk9Whlp2mtvIv+KNpQKN2F4SjvrEesubTRWGYSg+BnWZOnlCaSTU1sMpsBOzgbYhnsA==",
         "dependencies": {}
@@ -593,6 +614,10 @@
       },
       "cssesc@3.0.0": {
         "integrity": "sha512-/Tb/JcjK111nNScGob5MNtsntNM1aCNUDipB/TkwZFhyDrrE47SOx/18wF2bbjgc3ZzCSKW1T5nt5EbFoAz/Vg==",
+        "dependencies": {}
+      },
+      "csstype@3.1.3": {
+        "integrity": "sha512-M1uQkMl8rQK/szD0LNhtqxIPLpimGm8sOBwU7lLnCpSbTyY3yeU1Vc7l4KT5zT4s/yOxHH5O7tIuuLOCnLADRw==",
         "dependencies": {}
       },
       "date-fns@3.6.0": {
@@ -2032,8 +2057,22 @@
           "scheduler": "scheduler@0.23.2"
         }
       },
+      "react-dom@18.3.1_react@18.3.1": {
+        "integrity": "sha512-5m4nQKp+rZRb09LNH59GM4BxTh9251/ylbKIbpe7TpGxfJ+9kv6BLkLBXIjjspbgbnIBNqlI23tRnTWT0snUIw==",
+        "dependencies": {
+          "loose-envify": "loose-envify@1.4.0",
+          "react": "react@18.3.1",
+          "scheduler": "scheduler@0.23.2"
+        }
+      },
       "react@18.2.0": {
         "integrity": "sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==",
+        "dependencies": {
+          "loose-envify": "loose-envify@1.4.0"
+        }
+      },
+      "react@18.3.1": {
+        "integrity": "sha512-wS+hAgJShR0KhEvPJArfuPVN1+Hz1t0Y6n5jLrGQbkb4urgPE/0Rve+1kMB1v/oWgHgm4WIcV+i7F2pTVj+2iQ==",
         "dependencies": {
           "loose-envify": "loose-envify@1.4.0"
         }
@@ -2532,6 +2571,7 @@
   },
   "redirects": {
     "https://deno.land/x/lume/core.ts": "https://deno.land/x/lume@v2.2.4/core.ts",
+    "https://deno.land/x/lume@v2.2.4/deps/": "https://deno.land/x/lume@v2.2.4/deps",
     "https://deno.land/x/lume_shiki/mod.ts": "https://deno.land/x/lume_shiki@0.0.16/mod.ts",
     "https://esm.sh/@types/hast": "https://esm.sh/@types/hast@3.0.4",
     "https://esm.sh/@types/hast@3.0.4": "https://esm.sh/v135/@types/hast@3.0.4/index.d.ts",
@@ -3144,6 +3184,7 @@
     "https://deno.land/x/lume@v2.2.4/deps/path.ts": "3790d802bc4fea222223896ae9cf87455664b707b891b24922cd1ee461ba02c4",
     "https://deno.land/x/lume@v2.2.4/deps/postcss.ts": "9fe7e6f73c51059622be9ee1afd80d7aa59b075c8434bf1e4223cf61887986f5",
     "https://deno.land/x/lume@v2.2.4/deps/preact.ts": "0fee3286d49061adc63e65389f3d374dfb714872d210d67dbbc6104976f1f6ff",
+    "https://deno.land/x/lume@v2.2.4/deps/react.ts": "e78c2f0ef668ce2d79ddc040964f76a350ba8703dcc7473f567444e2d5478f14",
     "https://deno.land/x/lume@v2.2.4/deps/remark.ts": "e34033cccfca0d38733fb4a34205da32be3eebf4486aa6dbbf2ba9126a5525b2",
     "https://deno.land/x/lume@v2.2.4/deps/sass.ts": "f71337c96dc08851b1cbe9e95e796246368e1c4a32f81d6c41df37df1a7cbd96",
     "https://deno.land/x/lume@v2.2.4/deps/tailwindcss.ts": "7ab6da5b927810daccc8e5d540f9a7942ba851a3b5d421fd85797a2bde134673",
@@ -3164,6 +3205,7 @@
     "https://deno.land/x/lume@v2.2.4/plugins/feed.ts": "c3702523ae8507d7d20c5f91635c0dc76e09610aaf1db7cc6af2da484cb7c9e0",
     "https://deno.land/x/lume@v2.2.4/plugins/inline.ts": "8e7e1e83a0c1700d8306acab0bb4b30fbcfae0a84548271e4696bdbcc2c4d28f",
     "https://deno.land/x/lume@v2.2.4/plugins/json.ts": "f6429bbd865e3666ef3385fd205fcc92df02ca2c0f74f20baa5c0798a81e1642",
+    "https://deno.land/x/lume@v2.2.4/plugins/jsx.ts": "20ece4ddd348089dd407f184f462f8824b342aef461117257166fd81323f18da",
     "https://deno.land/x/lume@v2.2.4/plugins/jsx_preact.ts": "0059bba926c57e7437da4b403e9e9623c2ff4936904a23fde5297e3db80e3148",
     "https://deno.land/x/lume@v2.2.4/plugins/markdown.ts": "b0f224dcffa0abeb30af178d7ec21f50515c2a7ccd42a3347aac3bea53c4ca27",
     "https://deno.land/x/lume@v2.2.4/plugins/mdx.ts": "ac27a6f041ef7934a55735d538db636e21c75609ac44f336e542ca78b6db0804",

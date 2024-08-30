@@ -12,7 +12,7 @@ import feed from 'lume/plugins/feed.ts';
 import toml from 'lume/plugins/toml.ts';
 import nav from 'lume/plugins/nav.ts';
 import metas from 'lume/plugins/metas.ts';
-import jsx from 'lume/plugins/jsx_preact.ts';
+import jsx from 'lume/plugins/jsx.ts'; // TODO: preact?
 import mdx from 'lume/plugins/mdx.ts';
 import shiki from 'https://deno.land/x/lume_shiki@0.0.16/mod.ts';
 

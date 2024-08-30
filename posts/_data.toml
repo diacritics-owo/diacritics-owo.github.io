@@ -1,2 +1,2 @@
-layout = "layouts/post.vto"
+layout = "layouts/post.mdx"
 type = "post"

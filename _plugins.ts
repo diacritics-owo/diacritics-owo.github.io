@@ -19,7 +19,6 @@ import contents from 'npm:markdown-toc@1.2.0';
 export const rehypeHeaderLinks = () => {
   return (tree: Root) => {
     visit(tree, 'element', (node) => {
-      // TODO: unlinked
       if (
         headingRank(node) &&
         node.properties.id &&
