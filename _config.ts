@@ -7,7 +7,6 @@ import postcss from 'lume/plugins/postcss.ts';
 import readingInfo from 'lume/plugins/reading_info.ts';
 import sitemap from 'lume/plugins/sitemap.ts';
 import robots from 'lume/plugins/robots.ts';
-import date from 'lume/plugins/date.ts';
 import feed from 'lume/plugins/feed.ts';
 import toml from 'lume/plugins/toml.ts';
 import nav from 'lume/plugins/nav.ts';
@@ -25,12 +24,6 @@ import { rehypeHeaderLinks, toc } from './_plugins.ts';
 const site = lume();
 
 site.use(toml());
-/* site.use(
-  remark({
-    remarkPlugins: [remarkMath],
-    rehypePlugins: [rehypeKatex, rehypeSlug, rehypeHeaderLinks],
-  })
-); */
 site.use(jsx());
 site.use(
   mdx({
@@ -54,7 +47,6 @@ site.use(
     extensions: ['.md', '.mdx'],
   })
 );
-site.use(date());
 site.use(nav());
 
 site.use(sitemap());

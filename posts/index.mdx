@@ -10,4 +10,4 @@ import Post from '../_includes/Post.tsx';
 
 <hr />
 
-{nav.menu('/posts/').children.map((item) => Post(item))}
+{nav.menu('/posts/').children.sort((a, b) => b.data.date - a.data.date).map((item) => Post(item))}

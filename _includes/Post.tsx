@@ -10,7 +10,7 @@ export default (data: {
   };
 }) => (
   <>
-    <div className="p-6 bg-white border border-gray-200 rounded-lg shadow">
+    <div className="p-6 bg-white border border-gray-200 rounded-lg shadow mb-10">
       <h3 className="mt-0">
         <a href={data.slug}>{data.data.title}</a>
       </h3>
