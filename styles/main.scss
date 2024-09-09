@@ -29,3 +29,14 @@ pre:has(code) {
   content: '§';
   margin-right: 10px;
 }
+
+.prose {
+  code {
+    font-weight: normal;
+  }
+
+  code::before,
+  code::after {
+    content: none;
+  }
+}

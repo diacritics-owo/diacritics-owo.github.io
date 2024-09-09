@@ -1,0 +1,39 @@
+---
+title: Java Descriptor Reference
+date: 2024-09-09
+---
+
+# Java Descriptor Reference
+
+This is a reference of JVM descriptors, mostly for my own benefit.
+
+---
+
+## Types
+
+| Type                                                           | Descriptor                       |
+| -------------------------------------------------------------- | -------------------------------- |
+| <code>boolean</code>                                           | <code>Z</code>                   |
+| <code>int</code>                                               | <code>B</code>                   |
+| <code>char</code>                                              | <code>C</code>                   |
+| <code>short</code>                                             | <code>S</code>                   |
+| <code>int</code>                                               | <code>I</code>                   |
+| <code>long</code>                                              | <code>J</code>                   |
+| <code>float</code>                                             | <code>F</code>                   |
+| <code>double</code>                                            | <code>D</code>                   |
+| <code>void</code>                                              | <code>V</code>                   |
+| <code>com.example.Class</code>                                 | <code>Lcom/example/Class;</code> |
+| <code>T[]</code>                                               | <code>[T</code>                  |
+| <code>T<sub>1</sub>\<T<sub>2</sub>, T<sub>3</sub>, ...></code> | <code>T</code>[^1]               |
+
+[^1]: Type erasure
+
+## Symbols
+
+| Symbol                                                               | Descriptor                                                      |
+| -------------------------------------------------------------------- | --------------------------------------------------------------- |
+| <code>com.example.Class</code>                                       | <code>com/example/Class</code>                                  |
+| <code>T<sub>1</sub> method(T<sub>2</sub>, T<sub>3</sub>, ...)</code> | <code>method(T<sub>2</sub>T<sub>3</sub>...)T<sub>1</sub></code> |
+| <code>Class(T<sub>1</sub>, T<sub>2</sub>, ...)</code>                | <code>\<init>(T<sub>1</sub>T<sub>2</sub>...)V</code>            |
+
+---
